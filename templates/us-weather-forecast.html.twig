@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Template for the Weather Forecast field formatter.
+ *
+ * Available variables:
+ * - city: City name.
+ * - timezone: Timezone of the city.
+ * - forecast_list: array of weather forecast list.
+ */
+#}
+<div class="us-weather-forecast-container">
+  <h2 class="title">Forecast for {{ city }}, US</h2>
+  <div class="description">Hourly forecast for next days.</div>
+  <div class="weather-forecast">
+    {% for list in forecast_list %}
+      <h3>{{ list.dt | date("d F d - ga", timezone) }}</h3>
+    
+      {% if (list.weather.0.description and list.weather.0.icon) %}
+        <div class="weather-desc">
+          <img src="http://openweathermap.org/img/wn/{{ list.weather.0.icon }}@2x.png" alt="" width="20"> <strong>{{ list.weather.0.description }}</strong>
+        </div>
+        <br />
+      {% endif %}
+
+      {% if (list.main.temp) %}
+        <div class="temperature">
+          Temperature: {{ list.main.temp|round }}°F (min: {{ list.main.temp_min|round }}°F | max: {{ list.main.temp_max|round }}°F )
+        </div>
+      {% endif %}
+    
+      {% if (list.main.humidity) %}
+        <div class="humidity">
+          Humidity: {{ list.main.humidity }}%
+        </div>
+      {% endif %}
+    
+      {% if (list.main.pressure) %}
+        <div class="pressure">
+          Pressure: {{ list.main.pressure }} hPa
+        </div>
+      {% endif %}
+        
+      {% if (list.wind.speed) %}
+        <div class="wind-speed">
+          Wind speed: {{ list.wind.speed }}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

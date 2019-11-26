@@ -1,0 +1,7 @@
+us_weather_forecast.admin_settings:
+  path: '/admin/config/services/us_weather_forecast'
+  defaults:
+    _form: '\Drupal\us_weather_forecast\Form\AdminSettingsForm'
+    _title: 'US Weather Forecast'
+  requirements:
+    _permission: 'administer us weather forecast'

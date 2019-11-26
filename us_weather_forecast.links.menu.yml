@@ -1,0 +1,6 @@
+us_weather_forecast.admin_settings:
+  title: 'US Weather Forecast'
+  description: 'Configure Api settings.'
+  route_name: us_weather_forecast.admin_settings
+  weight: 0
+  parent: system.admin_config_services

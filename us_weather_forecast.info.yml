@@ -1,0 +1,6 @@
+name: 'US Weather Forecast'
+type: module
+description: 'Returns weather forecast for a US city'
+core: 8.x
+package: 'Custom'
+configure: us_weather_forecast.admin_settings

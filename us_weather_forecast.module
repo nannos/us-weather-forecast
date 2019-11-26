@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function us_weather_forecast_theme() {
+  return [
+    'us_weather_forecast' => [
+      'variables' => [
+        'city' => NULL,
+        'timezone' => NULL,    
+        'forecast_list' => NULL,
+      ],
+      'template' => 'us-weather-forecast',
+    ],
+  ];
+}

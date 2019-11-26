@@ -1,0 +1,4 @@
+services:
+  us_weather_forecast.manager:
+    class: \Drupal\us_weather_forecast\UsWeatherForecastManager
+    arguments: ['@config.factory', '@http_client']
