@@ -111,6 +111,11 @@ class WeatherForecastFormatter extends FormatterBase implements ContainerFactory
           '#city' => $weather_forecast->city->name,      
           '#timezone' => $timezone,
           '#forecast_list' => $forecast_list,
+          '#attached' => [
+            'library' => [
+              'us_weather_forecast/us_weather_forecast_theme',
+            ],
+          ],
           '#cache' => array('max-age' => 0),
         ];
       }

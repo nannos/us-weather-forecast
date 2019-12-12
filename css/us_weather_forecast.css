@@ -1,0 +1,17 @@
+.us-weather-forecast-container .weather-location {
+  text-transform: uppercase;
+}
+
+.us-weather-forecast-container h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.us-weather-forecast-container .description,
+.us-weather-forecast-container .temperature {
+  font-weight: bold;
+}
+
+.us-weather-forecast-container .temperature {
+  margin-bottom: 10px;
+}

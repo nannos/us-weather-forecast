@@ -1,0 +1,5 @@
+us_weather_forecast_theme:
+  version: 8.x
+  css:
+    base:
+      css/us_weather_forecast.css: {}
